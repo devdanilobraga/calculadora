@@ -1,0 +1,211 @@
+<div class="container" >
+<h1 class="my-3 text-primary">Calculadora Dutching</h1>
+<div class="card shadow">
+    <form class="m-3">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group"><!--div's para bootstrap-->
+                    <label for="validationServer01" class="col-sm-2 control-label"
+                    style="                    
+                    margin-right: center;
+                    width: 8em;
+                    font-size: 20px;">Aposta Total:</label>
+                    <input 
+                    type="number" 
+                    placeholder="Digite o valor " 
+                    class="form-control is-valid" 
+                    id="validationServer" 
+                    placeholder="Valor da entrada"
+                    name="valorStake" [(ngModel)]="valorStake">
+                </div>
+            </div>
+        </div>
+    <form>
+        
+        <form class="m-3">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupPrepend3">Odd</span>
+                        </div>
+                        <input 
+                        type="number" 
+                        class="form-control is-valid"
+                        id="validationServerUsername"
+                        placeholder="Odd 01" aria-describedby="inputGroupPrepend3" 
+                        name="odd01" [(ngModel)]="odd01">
+                     </div>
+                <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend3">Odd</span>
+            </div>
+                <input 
+                type="number" 
+                class="form-control is-valid" 
+                id="validationServerUsername" 
+                placeholder="Odd 02" 
+                aria-describedby="inputGroupPrepend3" 
+                id="odd02"
+                name="odd02" [(ngModel)]="odd02">
+                 <button (click)="click3 = !click3" class="btn btn-outline-warning"><i class="fa-solid fa-plus"></i></button> 
+                    </div>
+                </div>
+            </div>
+        </form>
+                <form class="m-3">
+                    <div class="row">
+                        <div class="col-md-12">
+             <span *ngIf="click3">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroupPrepend3">Odd</span>
+                </div>
+                <input 
+                type="number" 
+                class="form-control is-valid" 
+                id="validationServerUsername" 
+                placeholder="Odd 03" 
+                aria-describedby="inputGroupPrepend3" 
+                required id="odd03" 
+                name="odd03" [(ngModel)]="odd03">
+
+                <button (click)="click4 = !click4" class="btn btn-outline-warning"><i class="fa-solid fa-plus" ></i></button> 
+            </div>
+        </span>
+
+        <span *ngIf="click4">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroupPrepend3">Odd</span>
+                </div>
+                <input 
+                type="number" 
+                class="form-control is-valid" 
+                id="validationServerUsername" 
+                placeholder="Odd 04" 
+                aria-describedby="inputGroupPrepend3" 
+                required id="odd04"
+                name="odd04" [(ngModel)]="odd04">
+                
+                <button (click)="click5 = !click5" class="btn btn-outline-warning"><i class="fa-solid fa-plus"></i></button> 
+            </div>
+        </span>
+            
+        <span *ngIf="click5">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroupPrepend3">Odd</span>
+                </div>
+                <input 
+                type="number" 
+                class="form-control is-valid" 
+                id="validationServerUsername" 
+                placeholder="Odd 05" 
+                aria-describedby="inputGroupPrepend3" 
+                required id="odd05"
+                name="odd05" [(ngModel)]="odd05">
+                
+                <button (click)="click6 = !click6" class="btn btn-outline-warning"><i class="fa-solid fa-plus"></i></button> 
+            </div>
+        </span>
+            
+        <span *ngIf="click6">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroupPrepend3">Odd</span>
+                </div>
+                <input 
+                type="number" 
+                class="form-control is-valid" 
+                id="validationServerUsername" 
+                placeholder="Odd 06" 
+                aria-describedby="inputGroupPrepend3" 
+                required 
+                name="odd06" [(ngModel)]="odd06">
+            </div>
+        </span>
+        <fieldset disabled>
+            <span *ngIf="clickResult">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroupPrepend3">Entrada Odd01</span>
+                    </div>
+                    <p style="                    
+                    margin-right: center;
+                    width: 8em;
+                    font-size: 20px;">{{ this.entradaOdd01 | currency: 'BRL' }}</p>
+                </div>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroupPrepend3">Entrada Odd02</span>
+                    </div>
+                    <p style="                    
+                    margin-right: center;
+                    width: 8em;
+                    font-size: 20px;">{{ this.entradaOdd02 | currency: 'BRL' }}</p>
+                </div>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroupPrepend3">Entrada Odd03</span>
+                    </div>
+                    <p style="                    
+                    margin-right: center;
+                    width: 8em;
+                    font-size: 20px;">{{ this.entradaOdd03 | currency: 'BRL' }}</p>
+                </div>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroupPrepend3">Entrada Odd04</span>
+                    </div>
+                    <p style="                    
+                    margin-right: center;
+                    width: 8em;
+                    font-size: 20px;">{{ this.entradaOdd04 | currency: 'BRL' }}</p>
+                </div>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroupPrepend3">Entrada Odd05</span>
+                    </div>
+                    <p style="                    
+                    margin-right: center;
+                    width: 8em;
+                    font-size: 20px;">{{ this.entradaOdd05 | currency: 'BRL' }}</p>
+                </div>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroupPrepend3">Entrada Odd06</span>
+                    </div>
+                    <p style="                    
+                    margin-right: center;
+                    width: 8em;
+                    font-size: 20px;">{{ this.entradaOdd06 | currency: 'BRL' }}</p>
+                </div>
+                
+                
+                
+                <div class="form-group">
+                    <label for="disabledTextInput" class="col-sm-2 control-label" style="                    
+                    margin-right: center;
+                    width: 8em;
+                    font-size: 20px;">Caso de green, seu retorno vai ser de:</label>
+                    <p>{{ this.lucro | currency: 'BRL' }}</p>
+                </div>
+            </span>
+        </fieldset>
+                        </div>
+                    </div>
+                </form>
+
+        <form class="m-3">
+        <div class="row">
+                <div class="col">
+                    <button class="btn btn-primary" form="submit" (click)="calcular()">Calcular</button>
+                    <button class="btn btn-success float-right" (click)="limpar()">Limpar</button>
+                </div>
+            </div>
+        </form>
+    </form>
+</form>
+</div>
+</div>
